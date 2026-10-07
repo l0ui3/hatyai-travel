@@ -1,0 +1,16 @@
+{
+  "name": "合艾旅行行程 Dashboard",
+  "short_name": "合艾行程",
+  "description": "10/8–10/11 合艾 Hat Yai 四日行程：按摩、美食、咖啡、夜市的手機旅遊 Dashboard",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EDEFEA",
+  "theme_color": "#0F262B",
+  "lang": "zh-Hant",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
