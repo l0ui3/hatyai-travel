@@ -22,6 +22,10 @@ const PLACES = {
     q:"Padang Besar Railway Station Perlis", onMap:false, inTable:false, hv:true,
     hours:"CIQ（馬／泰雙邊關口）只在泰國火車進出時開放；陸路關口 06:00–22:00（馬來西亞時間）",
     note:"KTM ETS、Komuter 與 SRT 接駁車都在同一站；小小的「Padang Besar (Thai)」是另一個站，回程不要在那下車。" },
+  pens: { n:"Pens Leisure 接駁車（Padang Besar 車站 → Lee Garden）", short:"Pens Leisure", cat:"train", lat:6.6626841, lng:100.3201982, km:58.5, walk:999, grab:120,
+    q:"Padang Besar Railway Station Perlis", onMap:false, inTable:false, hv:true,
+    hours:"Padang Besar → Hat Yai 06:00–17:00（馬）；Hat Yai → Padang Besar 09:00–15:00；私人包車 06:00–20:30",
+    note:"售票亭在 Padang Besar 車站大廳，10 人座坐滿即開，直接送到合艾飯店／指定地點；含兩國過關約 2 小時。RM30／人（回程 300 THB）。回程預約 WhatsApp +66 99 310 8081。" },
   busterm: { n:"Hat Yai 巴士總站", short:"巴士總站", cat:"train", lat:6.9947035, lng:100.4819768, km:2.6, walk:35, grab:12,
     q:"Hat Yai Bus Terminal", hv:false, hours:"往 Padang Besar 小巴 07:00–19:00，約 60 THB、1–1.5 小時，坐滿發車", onMap:false },
 
@@ -93,13 +97,13 @@ const PLACES = {
     hours:"17:00–22:00（10/8 即時清單）；二–日，週一休", note:"年輕人取向的小吃夜市，備案用。" },
 
   /* ---- 按摩 ---- */
-  oliver: { n:"Oliver Thai Traditional Massage", short:"Oliver 按摩", cat:"massage", lat:7.0048, lng:100.4692, km:0.6, walk:8, grab:6,
-    q:"Oliver Thai Traditional Massage Hat Yai", addr:"1 Rajuthit Soi 7 Rd（Lee Garden 與火車站之間）", hv:true,
-    hours:"每日 09:00–23:00", note:"Google 4.2（332 則）。電話 +66 74 253 425。10/8 上午 10:00 首選。",
+  oliver: { n:"Oliver Thai Traditional Massage", short:"Oliver 按摩", cat:"massage", lat:6.9992, lng:100.4644, km:2.3, walk:31, grab:9,
+    q:"Oliver Thai Traditional Massage Hat Yai", addr:"1 Rajuthit Soi 7 Rd（鐵路西側、Wat Hat Yai Nai 附近，不在市中心）", hv:true,
+    hours:"每日 09:00–23:00", note:"Google 4.2（332 則）。電話 +66 74 253 425。離 Airbnb 2.3 km，要搭 Grab；備案用。",
     price:"泰式 2 小時約 450 THB（2025/10 評論）" },
-  pailin: { n:"Pailin Massage（Lee Garden 旁）", short:"Pailin 按摩", cat:"massage", lat:7.0060, lng:100.4720, km:0.6, walk:8, grab:6, onMap:false,
+  pailin: { n:"Pailin Massage（Lee Garden 旁）", short:"Pailin 按摩", cat:"massage", lat:7.0062, lng:100.4716, km:0.6, walk:8, grab:6,
     q:"Pailin Massage Hat Yai", addr:"Lee Garden Plaza 旁（Pailin 1 & 2）", hv:true,
-    hours:"每日 07:00–24:00", note:"Google 4.3（97 則）。泰式、精油、熱石。電話 +66 74 236 307。",
+    hours:"每日 07:00–24:00", note:"Google 4.3（97 則）。泰式、精油、熱石。電話 +66 74 236 307。10/8 上午 10:00 首選：走路 8 分鐘。",
     price:"腳底約 200 THB/h；泰式／精油未查到" },
   easeme: { n:"Ease Me Massage & Residence", short:"Ease Me", cat:"massage", lat:7.0046184, lng:100.4747596, km:0.7, walk:9, grab:6,
     q:"Ease Me Thai Massage and Residence Hat Yai", addr:"79/17 Thamnoonvithi Rd（分店 45/2 Sanehanusorn Rd）", hv:true,
@@ -109,8 +113,8 @@ const PLACES = {
     q:"The One Beauty Massage Hatyai Center", addr:"144 Chotwithayakul 5 Rd（ASEAN 夜市一帶）", hv:true,
     hours:"每日 11:00–24:00", note:"Google 4.9（2,678 則）。泰式、精油、芳療、熱石、草藥球。熱門，建議 LINE／WhatsApp 預約：092 239 9293。10/9 逛完 ASEAN 夜市順路。" },
   sukniyom: { n:"Sukniyom Thai Massage", short:"Sukniyom", cat:"massage", lat:7.0045, lng:100.4722, km:0.6, walk:8, grab:6, onMap:false,
-    q:"Sukniyom Thai Massage Hat Yai", addr:"94 Thamnoonvithi Rd, Indra Hotel 2F", hv:false,
-    hours:"未查到", price:"泰式 1h 300／2h 500 THB（評論）" },
+    q:"Sukniyom Thai Massage Hat Yai", addr:"94 Thamnoonvithi Rd, Indra Hotel 2F（Lee Garden 走路 3 分鐘）", hv:false,
+    hours:"未查到", note:"TripAdvisor 4.3（7 則）。Pailin 客滿時的備案。", price:"泰式 1h 300／2h 500 THB（評論）" },
 
   /* ---- 吃飯 ---- */
   decha: { n:"Kai Tod Decha 德差炸雞", short:"Decha 炸雞", cat:"food", lat:7.00397, lng:100.473763, km:0.7, walk:9, grab:6,
@@ -150,7 +154,7 @@ const PLACES = {
 /* ---------- 固定提醒（首頁與資訊頁） ---------- */
 const ALERTS = [
   "泰國比馬來西亞<b>慢 1 小時</b>：泰國 07:20 = 馬來西亞 08:20。火車時刻看清楚是哪國時間。",
-  "10/8 凌晨 <b>04:11（馬）／03:11（泰）</b>抵達 Padang Besar。最早一班往 Hat Yai 的 SRT 接駁車是 <b>10:15 泰國時間</b>，車站關口只在泰國火車進出時開；要 06–07 點到合艾只能 06:00（馬）陸路關口開門後走過去再搭車。",
+  "10/8 凌晨 <b>04:11（馬）／03:11（泰）</b>抵達 Padang Besar。<b>06:00（馬）Pens Leisure 接駁車準時出發</b>，含兩國過關約 2 小時，約 07:00（泰）送到 Lee Garden。SRT 火車最早 10:15（泰）只是備案。",
   "10/8 白天需要工作：<b>12:00–18:00</b> 固定工作時段。",
   "10/8 <b>18:00 後</b>才正式開始 Vacation Mode。",
   "10/11 <b>11:00（馬）Padang Besar ETS</b> 是固定、不可錯過的行程。注意：KTMB 2026/6/1 時刻表上 Padang Besar 南下班次是 09:45（EP9225）與 12:05（EG9449），<b>請用 KITS 訂票紀錄核對實際班次</b>。",
@@ -165,24 +169,21 @@ const DAYS = [
   { d:"10/08", dow:"週四", kind:"work", title:"抵達 → 早餐 → 按摩 → 工作 → 18:00 放假",
     foot:"前一晚幾乎沒睡，今晚別排太晚；22:00 前回 Airbnb。工作地點優先順序：Airbnb 房內 → Desktop Co-working → 咖啡廳。",
     items:[
-      { s:"03:11", e:"05:00", cat:"border", t:"抵達 Padang Besar（馬 04:11）", place:"padang", noleave:true,
-        d:"KTM 夜車 04:11 馬來西亞時間到站＝<b>03:11 泰國時間</b>。車站內 CIQ 只在泰國火車進出時運作，此刻什麼都沒開；SRT 最早一班 10:15（泰）才開。在 2F 候車區／車站附近休息等天亮。",
-        warn:["凌晨車站無任何往合艾的交通","SRT 接駁車最早 10:15 泰國時間（11:15 馬）"],
-        tips:["泰國時間＝馬來西亞 −1h","車站有廁所、小吃部（夜間是否開放未確認）"] },
-      { s:"05:00", e:"06:30", cat:"border", t:"走路過關 → 搭車前往 Hat Yai", noleave:true,
-        d:"06:00（馬）＝05:00（泰）陸路關口開門：從車站 2F 走天橋到 ICQS 關口約 10 分鐘，辦馬來西亞出境、泰國入境（出示 TDAC QR）。泰國側找計程車到合艾（約 1 小時，2023 年喊價 700–1,500 THB，可殺價）；省錢的話等 07:00 的小巴（60 THB，到合艾巴士總站，再 Grab 進市區）。",
-        warn:["此段是整趟最不確定的環節：凌晨關口外計程車數量少"],
-        tips:["準備泰銖現金或馬幣","護照效期 ≥ 6 個月","2 人分攤計程車划算"] },
-      { s:"06:30", e:"07:00", cat:"train", t:"抵達 Hat Yai 市區", place:"station", noleave:true,
-        d:"計程車可直接請司機開到 Supasarnrungsan Rd（Kim Yong 市場旁）或先到早餐店；若搭小巴則在巴士總站下車，Grab 約 12 分鐘進市區。" },
-      { s:"07:00", e:"08:30", cat:"coffee", t:"早餐＋咖啡＋休息", place:"morningcup", places:["morningcup","mcd","chokdee","acup"],
-        d:"首選 <b>Morning Cup</b>（06:30 開、kopi＋咖椰吐司）；要坐久、確定有插座與 Wi-Fi 就去 <b>McDonald's Lee Gardens</b>（07:00）；想吃點心去 <b>Chokdee Dim Sum</b>（06:00 開，抽號碼牌）。",
+      { s:"03:11", e:"05:00", cat:"border", t:"抵達 Padang Besar（馬 04:11）· 等 Pens Leisure", place:"padang", noleave:true,
+        d:"KTM 夜車 04:11 馬來西亞時間到站＝<b>03:11 泰國時間</b>。在車站大廳找 <b>Pens Leisure And Services</b> 售票亭（RM30／人，告知下車點 Lee Garden），06:00（馬）前集合。等車期間在 2F 候車區休息。",
+        tips:["泰國時間＝馬來西亞 −1h","準備 RM 現金付車資","TDAC QR 先截圖","車站有廁所、小吃部（夜間是否開放未確認）"] },
+      { s:"05:00", e:"07:00", cat:"border", t:"Pens Leisure 接駁車 06:00（馬）準時出發 → 過關 → Lee Garden", place:"pens", noleave:true,
+        d:"06:00 馬來西亞時間＝05:00 泰國時間出發，10 人座小巴。途中在陸路關口下車辦馬來西亞出境、泰國入境（出示 TDAC QR，護照效期 ≥ 6 個月），再上車直達合艾。含過關約 2 小時，<b>約 07:00（泰）到 Lee Garden Plaza</b>。",
+        warn:["關口 06:00（馬）才開，接駁車不會更早"],
+        tips:["泰國入境後手機時間會 −1h","備案：SRT 948 次 10:15（泰）發車，50 THB"] },
+      { s:"07:00", e:"08:30", cat:"coffee", t:"Lee Garden 下車 → 早餐＋咖啡＋休息", place:"mcd", noleave:true, places:["mcd","morningcup","chokdee","acup"],
+        d:"下車點就在 Lee Garden：行李多、要插座與 Wi-Fi 就直接進 <b>McDonald's Lee Gardens</b>（07:00 開）；想吃好一點走 15 分鐘到 <b>Morning Cup</b>（kopi＋咖椰吐司）或 <b>Chokdee Dim Sum</b>（抽號碼牌）。Airbnb 離 Lee Garden 走路 8 分鐘。",
         tips:["Morning Cup 週一休（另說週三）","帶著行李先別跑太遠"] },
       { s:"08:30", e:"09:30", cat:"home", t:"到 Airbnb 寄放行李／問能否提早入住", place:"home",
         d:"能入住：先洗澡休息。不能：寄放行李後到咖啡廳休息（A Cup Cafe 07:00 開，走路 8 分鐘）。",
         tips:["事前先用 Airbnb App 問房東 early check-in","記下門鎖密碼／Wi-Fi"] },
-      { s:"10:00", e:"11:30", cat:"massage", t:"泰式按摩 60–90 分鐘（不要太大力）", place:"oliver", places:["oliver","pailin"],
-        d:"首選 <b>Oliver Thai Traditional Massage</b>（09:00 開，走路 8 分鐘）；備案 <b>Pailin Massage</b>（Lee Garden 旁，07:00 開）。跟師傅說「เบา ๆ」（bao-bao，輕一點）。",
+      { s:"10:00", e:"11:30", cat:"massage", t:"泰式按摩 60–90 分鐘（不要太大力）", place:"pailin", places:["pailin","sukniyom","oliver"],
+        d:"首選 <b>Pailin Massage</b>（Lee Garden 旁，07:00 開，走路 8 分鐘）；客滿改 Lee Garden 走路 3 分鐘的 <b>Sukniyom</b>（Indra Hotel 2F，時間未查到）。<b>Oliver</b> 評價好但在鐵路西側 2.3 km，要搭 Grab 約 9 分鐘。跟師傅說「เบา ๆ」（bao-bao，輕一點）。",
         tips:["泰式 1h 約 200–300 THB","小費 50–100 THB 直接給師傅"] },
       { s:"11:30", e:"12:00", cat:"food", t:"午餐外帶 → 回工作地點", place:"home",
         d:"Lee Garden 周邊買炸雞、泰式便當或 7-Eleven 外帶，12:00 前就定位。" },
@@ -226,8 +227,8 @@ const DAYS = [
     items:[
       { s:"10:00", e:"11:30", cat:"coffee", t:"睡晚一點 · 早午餐＋咖啡", place:"acup", places:["acup","morningcup","chokdee","better"],
         d:"<b>A Cup Cafe</b>、<b>Morning Cup</b>（到 14:00）或 Better Together Café。想吃點心的話 Chokdee 11:30 前到。" },
-      { s:"11:30", e:"14:00", cat:"shop", t:"自由活動：商場 · 市區散步 · 按摩 · Shopping", place:"central", places:["central","leegarden","kimyong","pailin","oliver"],
-        d:"選一：Grab 14 分鐘到 <b>Central Hatyai</b> 吹冷氣逛街（10:00–21:00）；或市區散步補買伴手禮；或先來一次腳底按摩（Pailin／Oliver）。午餐在商場或市區解決。",
+      { s:"11:30", e:"14:00", cat:"shop", t:"自由活動：商場 · 市區散步 · 按摩 · Shopping", place:"central", places:["central","leegarden","kimyong","pailin"],
+        d:"選一：Grab 14 分鐘到 <b>Central Hatyai</b> 吹冷氣逛街（10:00–21:00）；或市區散步補買伴手禮；或先來一次腳底按摩（Pailin，Lee Garden 旁）。午餐在商場或市區解決。",
         tips:["雨天首選 Central","行李空間先想好"] },
       { s:"14:00", e:"14:40", cat:"home", t:"回 Airbnb 休息、換輕裝", place:"home", noleave:true, d:"把要帶去水上市場的現金、雨具準備好。" },
       { s:"15:00", e:"21:00", cat:"night", t:"Khlong Hae Floating Market 水上市場", place:"khlonghae", buffer:10,
@@ -272,10 +273,10 @@ const TRANSIT = {
   tznote:"泰國 UTC+7、馬來西亞 UTC+8。火車時刻表各用自己國家的時間：SRT 用泰國時間、KTM 用馬來西亞時間。手機跨境後會自動跳時區，看時間先確認是哪一國。",
   inbound:{
     steps:[
-      { t:"04:11", tz:"馬 · 泰 03:11", x:"KTM 抵達 Padang Besar（馬來西亞站）。站內 CIQ 此時不開。" },
-      { t:"06:00", tz:"馬 · 泰 05:00", x:"陸路關口開門（06:00–22:00 馬）。從車站 2F 走天橋到 ICQS 約 10 分鐘，辦馬出境＋泰入境（TDAC QR）。", hl:true },
-      { t:"06:30+", tz:"泰", x:"泰國側計程車到合艾約 1 小時（2023 年喊價 700–1,500 THB）；或等 07:00 起的小巴（60 THB，到合艾巴士總站）。" },
-      { t:"10:15", tz:"泰 · 馬 11:15", x:"若不趕時間：SRT 948 次接駁車，11:00 到 Hat Yai Junction。售票櫃台約 09:00（馬）開，2F 右側。" }
+      { t:"04:11", tz:"馬 · 泰 03:11", x:"KTM 抵達 Padang Besar（馬來西亞站）。站內 CIQ 此時不開。到大廳的 <b>Pens Leisure</b> 售票亭買票（RM30／人），下車點填 Lee Garden。" },
+      { t:"06:00", tz:"馬 · 泰 05:00", x:"<b>Pens Leisure 接駁車準時出發</b>（10 人座）。陸路關口 06:00（馬）開，乘客下車辦馬出境＋泰入境（TDAC QR）後再上車。", hl:true },
+      { t:"約 07:00", tz:"泰 · 馬 08:00", x:"抵達 Lee Garden Plaza（含過關約 2 小時）。Airbnb 走路 8 分鐘。", hl:true },
+      { t:"10:15", tz:"泰 · 馬 11:15", x:"備案：SRT 948 次接駁車，11:00 到 Hat Yai Junction。售票櫃台約 09:00（馬）開，2F 右側。" }
     ],
     trains:[
       { dep:"10:15", arr:"11:00", no:"948 接駁", note:"當日最早班。50 THB／RM7，3 等、電扇、不劃位。", hl:true },
@@ -283,7 +284,8 @@ const TRANSIT = {
       { dep:"17:00", arr:"17:45", no:"46 特快", note:"曼谷方向特快加掛 3 等車廂" }
     ],
     notes:[
-      "沒有任何火車在 03:11–10:15（泰）之間。要 06–07 點到合艾只能走陸路關口再搭車。",
+      "Pens Leisure And Services：Padang Besar → Hat Yai 06:00–17:00（馬）、RM30／人，坐滿即開，直送合艾飯店或指定地點；回程 Hat Yai → Padang Besar 09:00–15:00、300 THB，需 WhatsApp +66 99 310 8081 預約；私人包車 06:00–20:30。",
+      "沒有任何火車在 03:11–10:15（泰）之間，火車只是備案。",
       "SRT 接駁車票只在車站當天買，從不賣完；車程約 45 分鐘、約 60 km。",
       "資料來源為 Thai Train Guide（2025/8 更新）與 train36（2026），未在 SRT 官網核對；可打 SRT 1690 確認。",
       "2025/12 水災後接駁車已恢復。"
@@ -317,7 +319,7 @@ const TRANSIT = {
     ],
     notes:[
       "KTM ETS、Komuter、SRT 接駁車都在同一個 Padang Besar（馬來西亞）車站：馬來西亞列車用西側月台，泰國列車用東側。",
-      "備援：火車出狀況時，從合艾叫計程車直達 Padang Besar 約 1 小時（58 km）；小巴 07:00 起從巴士總站發車，坐滿才開、約 1.5 小時，在泰國關口放人，再走 600–700 m 到馬來西亞車站。",
+      "備援：火車出狀況時，Pens Leisure 私人包車 06:00 起可接（WhatsApp +66 99 310 8081，前一天先問價），或叫計程車直達 Padang Besar 約 1 小時（58 km）；小巴 07:00 起從巴士總站發車，坐滿才開、約 1.5 小時，在泰國關口放人，再走 600–700 m 到馬來西亞車站。",
       "來源：KTMB《Jadual Tren ETS 1 Jun 2026》PDF、Thai Train Guide、train36。"
     ]
   },
@@ -337,7 +339,7 @@ const TRANSIT = {
     "<b>市立公園回程</b>：公園門口叫 Grab 或搭 1871 雙條車；有報導說叫車 App 在園區訊號差，走到大門再叫。",
     "合艾市中心很好走：Airbnb 到 Lee Garden、Kim Yong、火車站都在 1.2 km 內。"
   ],
-  sources:"火車：thaitrainguide.com（2025/8）、train36.com（2026）、KTMB Jadual Tren ETS 1 Jun 2026、railtravelstation.com。過境：Wikipedia Padang Besar station、NST 2025/10（關口時間）、theislanddrum.com。Grab：citiesinsider.com、hatyaicity.com（2025/10）。"
+  sources:"火車：thaitrainguide.com（2025/8）、train36.com（2026）、KTMB Jadual Tren ETS 1 Jun 2026、railtravelstation.com（含 Pens Leisure 介紹）。過境：Wikipedia Padang Besar station、NST 2025/10（關口時間）、theislanddrum.com。Grab：citiesinsider.com、hatyaicity.com（2025/10）。"
 };
 
 /* ---------- 美食頁 ---------- */
@@ -362,7 +364,7 @@ const BUDGET = {
     { n:"夜市小吃（2 晚）", thb:800, note:"每人每晚 200 THB" },
     { n:"按摩 ×3", thb:2700, note:"10/8 泰式 90 分、10/9 腳底（選配）、10/10 精油 90 分" },
     { n:"市區 Grab／tuk-tuk", thb:1600, note:"市區 10 趟＋公園、水上市場來回" },
-    { n:"10/8 Padang Besar → 合艾（計程車）", thb:1200, note:"最壞情況；小巴只要 120 THB" },
+    { n:"10/8 Pens Leisure 接駁車 Padang Besar → Lee Garden", thb:500, note:"RM30 ×2 ≈ 500 THB（付馬幣）" },
     { n:"10/11 火車 Hat Yai → Padang Besar", thb:100, note:"50 THB ×2" },
     { n:"市立公園纜車＋門票", thb:440, note:"外國人 200 THB（來源不一致，可能更便宜）" },
     { n:"酒／夜生活（2 晚）", thb:800, note:"每人每晚 2 杯" },
